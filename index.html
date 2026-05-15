@@ -14,26 +14,98 @@
 
   <title>Ecole Dar Zitouna</title>
 
-
-
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
   <!-- progress barstle -->
   <link rel="stylesheet" href="css/css-circular-prog-bar.css">
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-  <!-- font wesome stylesheet -->
+  <!-- font awesome stylesheet -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
-
-
-
   <link rel="stylesheet" href="css/css-circular-prog-bar.css">
 
+  <!-- ✅ FIX OVERFLOW HORIZONTAL -->
+  <style>
+    html, body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    /* Fix sections qui dépassent */
+    section,
+    .top_container,
+    .hero_section,
+    .about_section,
+    .teacher_section,
+    .vehicle_section,
+    .client_section,
+    .contact_section,
+    .admission_section,
+    .landing_section,
+    .footer_section {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    /* Fix hero container sur mobile */
+    .hero-container {
+      max-width: 100%;
+    }
+
+    /* Fix images qui débordent */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Fix admission section position absolute qui déborde */
+    .admission_container {
+      max-width: 100%;
+      left: 0;
+      right: 0;
+    }
+
+    /* Fix navbar sur mobile */
+    .navbar {
+      max-width: 100%;
+    }
+
+    /* Fix card-deck sur mobile */
+    @media (max-width: 768px) {
+      .card-deck {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-deck .card {
+        margin-bottom: 1rem;
+      }
+
+      .hero_detail-box,
+      .hero_img-container {
+        width: 100%;
+        padding: 0 15px;
+      }
+
+      .admission_container {
+        position: relative !important;
+        flex-direction: column;
+      }
+
+      .admission_img-box img {
+        width: 100%;
+      }
+    }
+  </style>
 
 </head>
 
@@ -132,7 +204,6 @@
       </div>
       <div class="d-flex justify-content-center mt-5">
         <a href="" class="call_to-btn  ">
-
           <span>
             Read More
           </span>
@@ -141,9 +212,6 @@
       </div>
     </div>
   </section>
-
-
-  <!-- about section -->
 
   <!-- teacher section -->
   <section class="teacher_section layout_padding-bottom">
@@ -167,32 +235,24 @@
             <div class="card-body">
               <h5 class="card-title">Leena jorj</h5>
             </div>
-
           </div>
           <div class="card">
             <img class="card-img-top" src="images/teacher-3.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Magi Den</h5>
-
             </div>
-
           </div>
-
           <div class="card">
             <img class="card-img-top" src="images/teacher-4.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">jonson mark</h5>
-
             </div>
-
           </div>
         </div>
       </div>
 
-
       <div class="d-flex justify-content-center mt-3">
         <a href="" class="call_to-btn  ">
-
           <span>
             See More
           </span>
@@ -201,8 +261,6 @@
       </div>
     </div>
   </section>
-
-  <!-- teacher section -->
 
   <!-- vehicle section -->
   <section class="vehicle_section layout_padding">
@@ -243,12 +301,9 @@
           </a>
         </div>
       </div>
-
     </div>
   </section>
 
-
-  <!-- vehicle section -->
   <!-- client section -->
   <section class="client_section layout_padding">
     <div class="container">
@@ -279,11 +334,8 @@
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
               ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum."
-
-
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum."
             </p>
           </div>
         </div>
@@ -291,23 +343,14 @@
     </div>
   </section>
 
-
-
-
-  <!-- client section -->
-
   <!-- contact section -->
-
   <section class="contact_section layout_padding-bottom">
     <div class="container">
-
       <h2 class="main-heading">
         Contact Now
-
       </h2>
       <p class="text-center">
         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-
       </p>
       <div class="">
         <div class="contact_section-container">
@@ -338,12 +381,8 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
-
-
-  <!-- end contact section -->
 
   <!-- admission section -->
   <section class="admission_section ">
@@ -368,7 +407,6 @@
                   Read More
                 </a>
               </div>
-
             </div>
           </div>
         </div>
@@ -376,37 +414,21 @@
     </div>
   </section>
 
-
-
-
-
-
-  <!-- admission section -->
-
-
   <!-- landing section -->
   <section class="landing_section layout_padding">
     <div class="container">
       <h2 class="main-heading">
         Free Multipurpose Responsive
-
       </h2>
       <h2 class="main-heading number_heading">
         Landing Page 2019
-
       </h2>
       <p class="landing_detail text-center">
         There are many variations of passages of Lorem Ipsum available, but the majority There are many variations of
         passages of Lorem Ipsum available, but the majority h
-
       </p>
     </div>
   </section>
-
-  <!-- end landing section -->
-
-
-
 
   <!-- footer section -->
   <section class="container-fluid footer_section">
@@ -415,38 +437,26 @@
       <a href="https://html.design/">Free Html Templates</a>
     </p>
   </section>
-  <!-- footer section -->
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
 
   <script>
-    // This example adds a marker to indicate the position of Bondi Beach in Sydney,
-    // Australia.
     function initMap() {
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 11,
-        center: {
-          lat: 40.645037,
-          lng: -73.880224
-        },
+        center: { lat: 40.645037, lng: -73.880224 },
       });
-
       var image = 'images/maps-and-flags.png';
       var beachMarker = new google.maps.Marker({
-        position: {
-          lat: 40.645037,
-          lng: -73.880224
-        },
+        position: { lat: 40.645037, lng: -73.880224 },
         map: map,
         icon: image
       });
     }
   </script>
-  <!-- google map js -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
-  </script>
-  <!-- end google map js -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+
 </body>
 
 </html>
