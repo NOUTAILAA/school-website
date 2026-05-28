@@ -83,51 +83,45 @@
         }
         /* Galerie activités */
         
-        .activite_img-box {
-            overflow: hidden;
-            border-radius: 8px;
-            height: 280px;
-            max-width: 760px;
-            margin: 0 auto;
-        }
         
-        .activite_img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
         
         .activite_img-box img:hover {
             transform: scale(1.05);
         }
-        
-        .activite-slider {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 16px 0;
-        }
-        
-        .activite-next-btn {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color:  #082465;;
-            border: none;
-            color: #fff;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            font-size: 24px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            outline: none;
-        }
+        .activite_img-box {
+    overflow: hidden;
+    border-radius: 8px;
+    height: 400px;          /* plus haute sur desktop */
+    width: 100%;            /* ← prend toute la largeur */
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.activite_img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* remplit bien le conteneur */
+    transition: transform 0.3s ease;
+    display: block;         /* ← supprime l'espace sous l'image */
+}
+
+.activite-slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;     /* ← espace pour les boutons */
+}
+
+.activite-next-btn {
+    position: absolute;
+    right: 0;               /* ← collé au bord du slider */
+}
+
+.activite-prev-btn {
+    position: absolute;
+    left: 0;                /* ← collé au bord du slider */
+}
         
         .activite-next-btn:hover {
             background: #082465;;
