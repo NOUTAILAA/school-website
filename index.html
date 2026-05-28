@@ -88,40 +88,33 @@
         .activite_img-box img:hover {
             transform: scale(1.05);
         }
-        .activite_img-box {
-    overflow: hidden;
-    border-radius: 8px;
-    height: 400px;          /* plus haute sur desktop */
-    width: 100%;            /* ← prend toute la largeur */
-    max-width: 760px;
-    margin: 0 auto;
-}
-
-.activite_img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;      /* remplit bien le conteneur */
-    transition: transform 0.3s ease;
-    display: block;         /* ← supprime l'espace sous l'image */
-}
-
-.activite-slider {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 40px;     /* ← espace pour les boutons */
-}
-
-.activite-next-btn {
-    position: absolute;
-    right: 0;               /* ← collé au bord du slider */
-}
-
-.activite-prev-btn {
-    position: absolute;
-    left: 0;                /* ← collé au bord du slider */
-}
+        
+        .activite-slider {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 0;
+        }
+        
+        .activite-next-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color:  #082465;;
+            border: none;
+            color: #fff;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            outline: none;
+        }
         
         .activite-next-btn:hover {
             background: #082465;;
@@ -425,6 +418,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+        display: block;
+
     transition: transform 0.3s ease;
 }
 
@@ -504,8 +499,10 @@
 @media (max-width: 576px) {
 
     .activite_img-box {
-        height: 200px;
+        height: 320px;        /* ← plus haute sur mobile */
+        max-width: 100%;      /* ← pleine largeur */
     }
+
 
     .activite-next-btn,
     .activite-prev-btn {
@@ -515,11 +512,11 @@
     }
 
     .activite-next-btn {
-        right: 6px;
+        right: 4px;
     }
 
     .activite-prev-btn {
-        left: 6px;
+        left: 4px;
     }
 }
 
