@@ -29,8 +29,17 @@
 
   <!-- ✅ FIX OVERFLOW HORIZONTAL -->
   <style>
-    .top_container.sub_pages {
-  min-height: 400px; /* change ce chiffre selon ce que tu veux */
+.top_container.sub_pages {
+  min-height: 0 !important;
+  height: auto !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.top_container.sub_pages::before,
+.top_container.sub_pages::after {
+  height: 140px !important;
+  top: 0 !important;
 }
     html, body {
       overflow-x: hidden;
@@ -73,6 +82,15 @@
         margin-right: 0;
       }
     }
+    body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.teacher_section {
+  flex: 1;
+}
   </style>
 
 </head>
@@ -97,21 +115,11 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="teacher.html"> Teacher </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="vehicle.html"> vehicle </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact Us</a>
-                </li>
+                <li class="nav-item active"><a class="nav-link" href="index.html">Accueil <span class="sr-only">(actuel)</span></a></li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">L'École</a></li>
+                                <li class="nav-item"><a class="nav-link" href="teacher.html">Enseignants</a></li>
+                                <li class="nav-item"><a class="nav-link" href="vehicle.html">Transport</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
               </ul>
               <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                 <button class="btn my-2 my-sm-0 nav_search-btn" type="submit"></button>
